@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-function DetailView({api_key}){
+function DetailView({api_key}) {
     const [dog, setDog] = useState(null)
     let params = useParams();
 
@@ -28,37 +28,48 @@ function DetailView({api_key}){
     return (
         <>
             {dog ? (
-                <>
+                <div className={'dogInfo'}>
                     <h1>{dog[0].name}</h1>
 
-                <hr/>
+                    <hr/>
+                    <div className={'behaviorInfo'}>
+                        <div>
+                            <h2>Temperament:</h2>
+                            <p>{dog[0].temperament}</p>
+                        </div>
 
-                    <h3>{dog[0].name} characteristics:</h3>
-                    <p>{dog[0].bred_for}</p>
+                        <div>
+                            <h2>Characteristics:</h2>
+                            <p>{dog[0].bred_for}</p>
+                        </div>
+                    </div>
 
-                    <h3>{dog[0].name} temperament:</h3>
-                    <p>{dog[0].temperament}</p>
+                    <hr/>
 
-                <hr/>
+                    <div className={'bodyInfo'}>
+                        <div>
+                            <h2>Height:</h2>
+                            <p>{dog[0].height.metric} cm</p>
+                        </div>
 
-                    <h3>{dog[0].name} height:</h3>
-                    <p>{dog[0].height.metric} cm</p>
+                        <div>
+                            <h2>Weight:</h2>
+                            <p>{dog[0].weight.metric} kg</p>
+                        </div>
 
-                    <h3>{dog[0].name} weight:</h3>
-                    <p>{dog[0].weight.metric} kg</p>
+                        <div>
+                            <h2>Life span:</h2>
+                            <p>{dog[0].life_span}</p>
+                        </div>
+                    </div>
 
-                    <h3>Life span:</h3>
-                    <p>{dog[0].life_span}</p>
+                    <hr/>
 
-                <hr/>
-
-                    <h3>{dog[0].name} image:</h3>
-                    <img src={`${dog[0].image.url}`} alt={`${dog[0].name}`} width={500}/>
-
-                <hr/>
-
-                    <h2>{dog[0].origin}</h2>
-                </>
+                    <div className={'pictureInfo'}>
+                        <h2>{dog[0].name} image:</h2>
+                        <img src={`${dog[0].image.url}`} alt={`${dog[0].name}`} width={500}/>
+                    </div>
+                </div>
             ) : (
                 <h2>Loading</h2>
             )}

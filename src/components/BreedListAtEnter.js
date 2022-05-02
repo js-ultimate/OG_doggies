@@ -1,12 +1,8 @@
 import {useEffect, useState} from "react";
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
-function Routes() {
-    return null;
-}
-
-function BreedListAtEnter({api_key}){
+function BreedListAtEnter({api_key}) {
     const [breeds, setBreeds] = useState([])
 
     useEffect(() => {
@@ -25,7 +21,6 @@ function BreedListAtEnter({api_key}){
     }
 
 
-
     return (
         <>
             <div className="App">
@@ -42,7 +37,10 @@ function BreedListAtEnter({api_key}){
                     {breeds.map((breed) => (
                         <li key={breed.name}>
                             <Link to={`/details/${breed.id}`}>
-                                {breed.name}
+                                <div className={'pictureInfo homepage'}>
+                                    <h2>{breed.name}</h2>
+                                    <img src={`${breed.image.url}`} alt={`${breed.name}`} width={500} loading={"lazy"}/>
+                                </div>
                             </Link>
                         </li>
                     ))}

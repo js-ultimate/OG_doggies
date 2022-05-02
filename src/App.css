@@ -1,38 +1,121 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+}
+/*style={{*/
+/*'border': '1px solid black', 'border-radius': '20px',*/
+/*'margin': '20px', 'padding': '25px'}}>*/
+
+.homepage {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 0 25px 25px 25px
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+* > h1, h2, h3, h4, h5, h6 {
+    font-weight: 550;
+}
+
+.dogInfo {
+    margin-top: 15px;
+    margin-inline: 5%;
+    padding-bottom: 30px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.dogInfo > * > *, h1 {
+    -webkit-box-shadow: 0px 0px 39px -16px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 39px -16px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 39px -16px rgba(66, 68, 90, 1);
+
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.dogInfo > * > * > * {
+    margin: 10px;
+}
+
+.behaviorInfo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.behaviorInfo > * {
+    max-width: 40%;
+}
+
+.bodyInfo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pictureInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pictureInfo > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
