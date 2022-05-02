@@ -65,6 +65,10 @@ ul {
     font-weight: 550;
 }
 
+h1 {
+    border: 1px solid rgba(114, 114, 114, 0.29);
+}
+
 .dogInfo {
     margin-top: 15px;
     margin-inline: 5%;
@@ -118,4 +122,18 @@ ul {
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.searchForm > * {
+    margin-inline: 5px;
+}
+
+.searchForm > button {
+    padding-inline: 10px;
+    font-weight: 500;
+}
+
+.homepageBtn {
+    margin-top: 10px;
+    height: 25px;
 }
